@@ -17,45 +17,48 @@ const btnJ = document.querySelector('.j')
 const btnK = document.querySelector('.k')
 
 
+
 function clickEffect(element, audio) {
-  element.classList.add('playing')
+  audio.currentTime = 0;
   audio.play()
-  setTimeout(() => {
+  element.classList.add('playing')
+  element.addEventListener('transitionend', (e) => {
+    if (e.propertyName !== 'transform') return
     element.classList.remove('playing')
-  }, 300)
+  })
 }
 
-document.addEventListener('keydown', function (event) {
-  const key = event.key.toUpperCase()
+window.addEventListener('keydown', function (event) {
+  const key = event.code
   switch (key) {
-    case 'A':
+    case 'KeyA':
       clickEffect(btnA, soundA)
       break;
-    case 'S':
+    case 'KeyS':
       clickEffect(btnS, soundS)
 
       break;
-    case 'D':
+    case 'KeyD':
       clickEffect(btnD, soundD)
 
       break;
-    case 'F':
+    case 'KeyF':
       clickEffect(btnF, soundF)
 
       break;
-    case 'G':
+    case 'KeyG':
       clickEffect(btnG, soundG)
 
       break;
-    case 'H':
+    case 'KeyH':
       clickEffect(btnH, soundH)
 
       break;
-    case 'J':
+    case 'KeyJ':
       clickEffect(btnJ, soundJ)
 
       break;
-    case 'K':
+    case 'KeyK':
       clickEffect(btnK, soundK)
       break;
     default:
