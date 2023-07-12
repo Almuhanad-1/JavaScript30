@@ -1,0 +1,35 @@
+:root {
+  --spacing: 20px;
+  --blur: 2px;
+  --base: #fc2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #02447a;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+img {
+  max-width: 700px;
+  padding: var(--spacing);
+  filter: blur(var(--blur));
+  background: var(--base);
+}
+
+.base-color {
+  color: var(--base);
+}

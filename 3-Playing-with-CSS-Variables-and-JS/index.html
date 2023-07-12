@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing-with-CSS-Variables-and-JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>Update CSS Variables With <span class="base-color">JS</span></h1>
+    <div>
+      <label for="spacing">Spacing</label>
+      <input
+        class="controls"
+        type="range"
+        name="spacing"
+        id="spacing"
+        max="150"
+        min="0"
+        step="1"
+        value="10"
+        data-sizing="px"
+      />
+      <label for="blur">Blur</label>
+      <input
+        class="controls"
+        type="range"
+        name="blur"
+        id="blur"
+        max="20"
+        min="0"
+        step="1"
+        value="2"
+        data-sizing="px"
+      />
+      <label for="base">Basr Color</label>
+      <input
+        class="controls"
+        type="color"
+        name="base"
+        id="base"
+        value="#ffcc22"
+      />
+    </div>
+    <img src="./image.webp" alt="city image" />
+  </body>
+</html>
