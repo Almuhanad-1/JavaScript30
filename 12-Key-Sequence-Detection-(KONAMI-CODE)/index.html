@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.cornify.com/js/cornify.js"></script>
+  </head>
+  <body>
+    <style>
+      p {
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+    <p>Secret key is 'asdfg', type it in your keyboard to see my magic!</p>
+    <script>
+      const enteredKeys = [];
+      const secretKey = "asdfg";
+      window.addEventListener("keyup", function (e) {
+        enteredKeys.push(e.key.toLowerCase());
+        enteredKeys.splice(
+          -enteredKeys.length - 1,
+          enteredKeys.length - secretKey.length
+        );
+        if (enteredKeys.join("").includes(secretKey)) {
+          cornify_add();
+        }
+      });
+    </script>
+  </body>
+</html>

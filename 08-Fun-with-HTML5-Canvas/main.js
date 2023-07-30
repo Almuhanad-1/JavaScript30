@@ -43,11 +43,7 @@ window.addEventListener('mousedown', function (e) {
   lastY = e.offsetY;
 })
 
-window.addEventListener('mouseup', function () {
-  isDrawing = false;
-  // ctx.stroke();
-  // ctx.beginPath();
-})
+window.addEventListener('mouseup', () => isDrawing = false)
 
 window.addEventListener('mouesout', () => isDrawing = false)
 
